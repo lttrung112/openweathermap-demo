@@ -65,6 +65,10 @@ allowing you to run without your tests timing out.
 
 `npm run clean`
 
-### Check code format use ESLint
+### Check code format error use ESLint
 
 `npm run lint`
+
+### Fix code format error use ESLint
+
+`npm run eslint:fix`

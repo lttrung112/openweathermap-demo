@@ -8,6 +8,7 @@
     "test": "wdio",
     "test.sauce": "wdio wdio.saucelabs.conf.js",
     "lint": "eslint .",
+    "eslint:fix": "eslint --fix .",
     "report": "allure serve report/allure-results",
     "report.ci": "allure generate report/allure-results --clean -o allure-report"
   },
