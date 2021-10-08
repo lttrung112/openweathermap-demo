@@ -17,7 +17,7 @@ Openweather Map testing
 - ESLint
 - MacOS support for Chrome and Firefox browser
 - Rest API automation
-- CI integration [CircleCI](https://app.circleci.com/pipelines/github/lttrung112/openweathermap) (under construction)
+- CI integration [CircleCI](https://app.circleci.com/pipelines/github/lttrung112/openweathermap-demo) (under construction)
 ## How to Start
 
 **Download or clone the project**
