@@ -2,7 +2,7 @@ Openweather Map testing
 ====================
 ## Part-1. Test strategy - Test design - Bugs report:
 
-- [Feature "Search weather in your city"](https://github.com/lttrung112/openweathermap/tree/test/test-design-bug-challenge)
+- [Feature "Search weather in your city"](https://github.com/lttrung112/openweathermap-demo/tree/master/test-design-bug-challenge)
 
 
 ## Part-2. WEB UI and API tests with WebdriverIO v7 and Mocha:
