@@ -1,13 +1,13 @@
 import Page from './page';
 
-import {element,isDisplayed} from "../../shared/wrapper";
+import { element, isDisplayed } from "../../shared/wrapper";
 
 
 class CityPage extends Page {
-
   /**
    *
-   * @returns {CityPage}
+   * @param {string} cityId
+   * @return {CityPage}
    */
   open(cityId) {
     super.open(`city/${cityId}`);
@@ -16,67 +16,61 @@ class CityPage extends Page {
 
   /**
    *
-   * @returns {string}
+   * @return {string}
    */
   getDateTime() {
     const CURRENT_TIME_TEXT = '//span[@class="orange-text"]';
     return element(CURRENT_TIME_TEXT).getText();
-
   }
 
   /**
    *
-   * @returns {string}
+   * @return {string}
    */
   getCityName() {
     const CURRENT_CITY_NAME_TEXT = '//div[@class="current-container mobile-padding"]//h2';
     return element(CURRENT_CITY_NAME_TEXT).getText();
-
   }
 
   /**
    *
-   * @returns {string}
+   * @return {string}
    */
-  getTemperature(){
-    const CURRENT_TEMPERATURE_TEXT = '//*[@class="heading"]'
+  getTemperature() {
+    const CURRENT_TEMPERATURE_TEXT = '//*[@class="heading"]';
     return element(CURRENT_TEMPERATURE_TEXT).getText();
-
   }
 
   /**
    *
-   * @returns {boolean}
+   * @return {boolean}
    */
-  isSkySituationDisplayed(){
+  isSkySituationDisplayed() {
     const SKY_SITUATION_TEXT = '//div[contains(text(),"Feels like")]';
     return isDisplayed(SKY_SITUATION_TEXT);
-
   }
 
   /**
    *
-   * @returns {string}
+   * @return {string}
    */
   getHumidityValue() {
     const HUMIDITY_TEXT = '//span[text()="Humidity:"]/..';
-    let value = element(HUMIDITY_TEXT).getText()
+    let value = element(HUMIDITY_TEXT).getText();
     value = value.split('\n')[1];
     return value;
-
   }
 
   /**
    *
-   * @returns {string}
+   * @return {string}
    */
   getVisibilityValue() {
-    const VISIBILITY_TEXT = '//span[text()="Visibility:"]/..'
-    let value = element(VISIBILITY_TEXT).getText()
+    const VISIBILITY_TEXT = '//span[text()="Visibility:"]/..';
+    let value = element(VISIBILITY_TEXT).getText();
     value = value.split('\n')[1];
     return value;
   }
-
 }
 
 export default new CityPage();

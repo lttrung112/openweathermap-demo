@@ -25,12 +25,12 @@ class Utilities {
   /**
    *
    * @param {array} geo
-   * @returns {string}
+   * @return {string}
    */
   static getDateTimeFromGeo(geo) {
-    const geoTz = require('geo-tz')
-    const tz = geoTz(geo[0], geo[1])
-    let options = {
+    const geoTz = require('geo-tz');
+    const tz = geoTz(geo[0], geo[1]);
+    const options = {
       timeZone: tz,
       month: 'short',
       day: 'numeric',
@@ -45,31 +45,30 @@ class Utilities {
   /**
    *
    * @param {string} value
-   * @returns {boolean}
+   * @return {boolean}
    */
-  static isHumidityFormat(value){
-    console.log('value',value)
+  static isHumidityFormat(value) {
+    console.log('value', value);
     return /^\d+(\.\d+)?%$/.test(value);
   }
 
   /**
    *
    * @param {string} value
-   * @returns {boolean}
+   * @return {boolean}
    */
-  static isVisibilityFormat(value){
+  static isVisibilityFormat(value) {
     return /^\d+(\.\d+)?km$/.test(value);
   }
 
   /**
    *
    * @param {string} value
-   * @returns {boolean}
+   * @return {boolean}
    */
-  static isTemperatureFormat(value){
+  static isTemperatureFormat(value) {
     return /^\d+?°C$/.test(value);
   }
-
 }
 
 module.exports = Utilities;

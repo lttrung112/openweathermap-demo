@@ -1,15 +1,13 @@
 class BrowserUtils {
-
-    /**
+  /**
      *
      * @param {string} key
-     * @returns {BrowserUtils}
+     * @return {BrowserUtils}
      */
-    keys(key) {
-        browser.keys(key);
+  keys(key) {
+    browser.keys(key);
 
-        return this;
-    }
-
+    return this;
+  }
 }
 module.exports = new BrowserUtils();
