@@ -32,13 +32,27 @@ Openweather Map testing
 
 **Run UI Tests**
 
-- For Chrome browser
+**For Chrome browser**
 
 ```npm test ./tests/e2e/config/wdio.chrome.conf.js```
 
-- For Firefox browser
+Notice: If there is an error related to Webdriver, please check:
+
+  - Check the latest stable version of [Chromedriver](https://chromedriver.storage.googleapis.com/LATEST_RELEASE). (e.g. 94.0.4606.61)
+  - Check whether your Chrome version: ````chrome://settings/help```` is matching with Chromedriver version.
+  - Open ````wdio.conf.js```` and set ````chrome: { version: '{your version}' }````.
+
+
+**For Firefox browser**
 
 ```npm test ./tests/e2e/config/wdio.firefox.conf.js```
+
+Notice: If there is an error related to Webdriver, please check:
+
+- Check the latest stable version of [geckodriver](https://github.com/mozilla/geckodriver/releases). (e.g. 0.30.0)
+- Check whether your Firefox version: Open ```Firefox-> About Firefox``` is matching with geckodriver version.
+- Open ````wdio.conf.js```` and set ````firefox: { version: '{your version}' }````.
+
 
 **Run API Tests**
 
