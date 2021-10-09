@@ -7,8 +7,8 @@ jobs:
 #      - image: circleci/openjdk:8-jdk-stretch
 
     working_directory: ~/projects
-#    environment:
-#        JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
+    environment:
+        JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
     steps:
       - checkout
       - run: java --version
