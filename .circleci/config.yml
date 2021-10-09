@@ -7,8 +7,9 @@ jobs:
 
       working_directory: ~/projects
         environment:
-          JAVA_HOME: /usr/local/openjdk-8
-#          JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
+          JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
+      java:
+        version: openjdk8
     steps:
       - checkout
       - run: java --version
