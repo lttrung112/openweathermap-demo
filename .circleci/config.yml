@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:12.22.5
       - image: circleci/openjdk:8-jdk-stretch
 
-    working_directory: ~/project
+#    working_directory: ~/project
     environment:
         JAVA_HOME:  /usr/lib/jvm/java-8-openjdk-amd64
     steps:
