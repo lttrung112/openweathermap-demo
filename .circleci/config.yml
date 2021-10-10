@@ -45,9 +45,9 @@ jobs:
           name: generate allure report
           command: |
             sudo npm install -g allure-commandline
-            echo BRANCH=development >> allure-results/environment.properties
+            echo BRANCH=development >> ./report/allure-results/environment.properties
             echo COMMIT=$CI_PULL_REQUEST/commits/$CIRCLE_SHA1 >> ./report/allure-results/environment.properties
-            allure generate --clean
+            allure generate ./report/allure-results --clean
           when: always
       - store_artifacts:
           path: ./report/screenShots/
