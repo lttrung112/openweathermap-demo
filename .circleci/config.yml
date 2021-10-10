@@ -4,7 +4,7 @@ jobs:
     docker:
 #      - image: circleci/node:12.22.5
       - image: circleci/node:12.22-browsers
-#      - image: circleci/openjdk:8-jdk-stretch
+      - image: circleci/openjdk:8-jdk-stretch
 
     working_directory: ~/projects
     environment:
