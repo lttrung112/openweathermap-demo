@@ -35,6 +35,11 @@ jobs:
           command: |
             npm test ./tests/e2e/config/wdio.firefox.conf.js
           no_output_timeout: 30m
+
+      - run:
+          name: Generate Allure Report
+          command: npm run report.ci
+          when: always
       - store_test_results:
           path: ./wdio-logs
 
@@ -43,3 +48,6 @@ jobs:
 
       - store_artifacts:
           path: ./errorShots/
+
+      - store_artifacts:
+          path: allure-report/
