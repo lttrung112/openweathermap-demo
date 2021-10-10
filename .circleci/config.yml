@@ -35,18 +35,22 @@ jobs:
             npm test ./tests/e2e/config/wdio.firefox.conf.js
           no_output_timeout: 30m
 
+#      - run:
+#          name: Generate Allure Report
+#          command: npm run report.ci
+#          when: always
+#      - store_test_results:
+#          path: ./wdio-logs
       - run:
-          name: Generate Allure Report
-          command: npm run report.ci
+          name: generate allure report
+          command: |
+            sudo npm install -g allure-commandline
+            echo BRANCH=development >> allure-results/environment.properties
+            echo COMMIT=$CI_PULL_REQUEST/commits/$CIRCLE_SHA1 >> ./report/allure-results/environment.properties
+            allure generate --clean
           when: always
-      - store_test_results:
-          path: ./wdio-logs
+      - store_artifacts:
+          path: ./report/screenShots/
 
       - store_artifacts:
-          path: ./screenShots/
-
-      - store_artifacts:
-          path: ./errorShots/
-
-      - store_artifacts:
-          path: allure-report/
+          path: ./report/allure-results
